@@ -1,0 +1,131 @@
+/* CSS */
+.ConvertButton {
+  align-items: center;
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.ConvertButton:active,
+.ConvertButton:hover {
+  outline: 0;
+}
+
+.ConvertButton span {
+  background-color: rgb(5, 6, 45);
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+.ConvertButton:hover span {
+  background: none;
+}
+
+@media (min-width: 768px) {
+  .ConvertButton {
+    font-size: 24px;
+    min-width: 196px;
+  }
+}
+/*input field style*/
+.input {
+	position:relative;
+	font-size: 1.5em;
+	background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+	padding: 3px;
+	display: inline-block;
+	border-radius: 9999em;
+	*:not(span) {
+		position: relative;
+		display: inherit;
+		border-radius: inherit;
+		margin: 0;
+		border: none;
+		outline: none;
+		padding: 0 .325em;
+		z-index: 1;
+		
+		&:focus + span {
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+	span {
+		
+		transform: scale(.993, .94); 
+		transition: transform .5s, opacity .25s;
+		opacity: 0; 
+		position:absolute;
+		z-index: 0;  
+		margin:4px; 
+		left:0;
+		top:0;
+		right:0;
+		bottom:0;
+		border-radius: inherit;
+		pointer-events: none; 
+		box-shadow: inset 0 0 0 3px #fff,
+			0 0 0 4px #fff,
+			3px -3px 30px #1beabd, 
+			-3px 3px 30px #10abff;
+	}
+	
+}
+
+html {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	line-height:1.5;
+	font-size:1em;
+}
+
+body {
+	text-align: center;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+}
+
+html, body {
+	height:100%;
+}
+
+input {
+	font-family: inherit;
+	line-height:inherit;
+	color:#2e3750;
+	min-width:12em;
+}
+
+::placeholder {
+	color:#cbd0d5;
+}
+
+html::after {
+	content:'';
+	background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+	height:3px;
+	width:100%;
+	position:absolute;
+	left:0;
+	top:0;
+}
