@@ -7,13 +7,55 @@
 </head>
 <body>
     <h1>JSON Fruit Lab</h1>
+    <p id = "demo"></p>
+    <canvas id="myCanvas" width="1920" height="600" ></canvas>
     <script>
+        const canvas = document.getElementById("myCanvas");
+        const ctx = canvas.getContext("2d");
+
+        
         var fruit = [
 	        {name:"Apple", quantity:20, color:"red"},
-	        {name:"Orange", quantity:10, color:"orange"}
+	        {name:"Orange", quantity:10, color:"orange"},
+            {name:"Banana", quantity:15, color:"yellow"},
+            {name:"kiwi", quantity:5, color:"green"},
+            {name:"Blueberry",quantity: 5, color:"blue"},
+            {name:"Grapes", quantity: 10, color:"purple"},
         ];
+        ctx.font =  "30px Arial";
+        ctx.fillStyle = fruit[0].color;
+        ctx.fillRect(0, 10, fruit[0].quantity*40, 75);
+        ctx.fillStyle = "black";
+        ctx.fillText(fruit[0].name +": "+fruit[0].quantity,10,60);
+
+        ctx.fillStyle = fruit[1].color;
+        ctx.fillRect(0, 110, fruit[1].quantity*40, 75);
+        ctx.fillStyle = "black";
+        ctx.fillText(fruit[1].name+": "+fruit[1].quantity,10,160);
+
+        ctx.fillStyle = fruit[2].color;
+        ctx.fillRect(0, 210, fruit[2].quantity*40, 75);
+        ctx.fillStyle = "black";
+        ctx.fillText(fruit[2].name+": "+fruit[2].quantity,10,260);
+
+        ctx.fillStyle = fruit[3].color;
+        ctx.fillRect(0, 310, fruit[3].quantity*40, 75);
+        ctx.fillStyle = "black";
+        ctx.fillText(fruit[3].name+": "+fruit[3].quantity,10,360);
+
+        ctx.fillStyle = fruit[4].color;
+        ctx.fillRect(0, 410, fruit[4].quantity*40, 75);
+        ctx.fillStyle = "black";
+        ctx.fillText(fruit[4].name+": "+fruit[4].quantity,10,460);
+
+        ctx.fillStyle = fruit[5].color;
+        ctx.fillRect(0, 510, fruit[5].quantity*40, 75);
+        ctx.fillStyle = "black";
+        ctx.fillText(fruit[5].name+": "+fruit[5].quantity,10,560);
+
         const myObj = JSON.parse(fruit);
-        document.getElementById("demo").innerHTML = myObj.name[0];
+        document.getElementById("myCanvas").innerHTML = myObj.name[0];
     </script>
+    <a href="https://arturrtr.github.io/CISC3610/">Home</a>
 </body>
 </html>
