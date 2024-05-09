@@ -4,25 +4,26 @@
     <link rel="stylesheet" href="FormCss.css">
 </head>
 <body>
-    <form id="conversionForm">
-        <p>Weight Conversion</p>
-        <input type="radio" id="kgToPounds" name="conversionType" value="kgToPounds"> Kilograms to Pounds
-        <br>
-        <input type="radio" id="poundsToKg" name="conversionType" value="poundsToKg"> Pounds to Kilograms
-        <br>
-        <p>Temperature Conversion</p>
-        <input type="radio" id="fToC" name="conversionType" value="fToC"> Fahrenheit to Celsius
-        <br>
-        <input type="radio" id="cToF" name="conversionType" value="cToF"> Celsius to Fahrenheit
-        <br>
-        <!--added span-->
-        <span class = "input"><input type="number" id="inputValue" required></span>
-        <br>
-        <button type="submit" class = "ConvertButton"><span class="text">Convert</span></button>
-        <button type="button" class = "ConvertButton"id="resetButton"><span class="text">Reset</span></button>
-    </form>
-    <p id="result"></p>
-    <button class="button-64" role="button"><span class="text">Button 64</span></button>
+    <div class="container">
+        <form id="conversionForm">
+            <p>Weight Conversion</p>
+            <input type="radio" id="kgToPounds" name="conversionType" value="kgToPounds"> Kilograms to Pounds</input>
+            <br>
+            <input type="radio" id="poundsToKg" name="conversionType" value="poundsToKg"> Pounds to Kilograms</input>
+            <br>
+            <p>Temperature Conversion</p>
+            <input type="radio" id="fToC" name="conversionType" value="fToC"> Fahrenheit to Celsius</input>
+            <br>
+            <input type="radio" id="cToF" name="conversionType" value="cToF"> Celsius to Fahrenheit</input>
+            <br>
+            <!--added span-->
+            <span class = "input"><input type="number" id="inputValue" required></input></span>
+            <br>
+            <button type="submit" class = "ConvertButton"><span class="text">Convert</span></button>
+            <button type="button" class = "ConvertButton"id="resetButton"><span class="text">Reset</span></button>
+        </form>
+        <p id="result"></p>
+    </div>
     <script>
         window.onload = function() {
             document.getElementById('inputValue').value = localStorage.getItem('inputValue');
