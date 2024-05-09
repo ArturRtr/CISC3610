@@ -8,27 +8,59 @@
 <body>
     <audio id="myAudio">
         <source src="MoveIt.mp3">
-        Your browser does not support the audio element.
+        <source src="Meow.mp3">
+        <source src="dog.mp3">
+        <source src="bird.mp3">
+        <source src="capybara.mp3">
     </audio>
     <h1>Audio Lab</h1>
-    
+    <!--href="MoveIt.mp3"-->
     <map name = "catimagemap">
-        <button onclick="playCatAudio()" coords="320,392,1,0" shape="rect">
+        <area coords="320,392,0,0" shape="rect" href="#"onclick="playCatAudio()">
     </map>
-    <img src = "cat.png" width="300" usemap="catimagemap">
-    <img src = "dog.png" width="300" height="300">
-    <img src = "bird.png" width="300" height="300">
-    <img src = "../julian.png" width="300" height="300">
-    <img src = "capybara.png" width="300" height="300">
+    <map name = "dogimagemap">
+        <area coords="4,3,1736,1832" shape="rect" href="#"onclick="playDogAudio()">
+    </map>
+    <map name = "birdimagemap">
+        <area coords="17,7,7777,7938" shape="rect" href="#"onclick="playBirdAudio()">
+    </map>
+    <map name = "capybaraimagemap">
+        <area coords="39,0,417,492" shape="rect" href="#"onclick="playCapybaraAudio()">
+    </map>
+    <map name = "julianimagemap">
+        <area coords="778,1023,0,5" shape="rect" href="#" onclick="playJulianAudio()">
+    </map>
+    <img src = "cat.png" width="300" usemap="#catimagemap">
+    <img src = "dog.png" width="300" height="300" usemap="#dogimagemap">
+    <img src = "bird.png" width="300" height="300" usemap="#birdimagemap">
+    <img src = "../julian.png" width="300" height="300" usemap="#julianimagemap">
+    <img src = "capybara.png" width="300" height="300" usemap="#capybaraimagemap">
+    <a href="https://arturrtr.github.io/CISC3610/">Home</a>
     <script>
         var x = document.getElementById("myAudio"); 
         
         function playCatAudio() { 
-          x.play(); 
+            x.src="Meow.mp3"
+            x.play(); 
         } 
-        
+        function playJulianAudio() { 
+            x.src="MoveIt.mp3"
+            x.play(); 
+        } 
+        function playDogAudio(){
+            x.src="dog.mp3"
+            x.play(); 
+        }
+        function playBirdAudio(){
+            x.src="bird.mp3"
+            x.play(); 
+        }
+        function playCapybaraAudio(){
+            x.src="capybara.mp3"
+            x.play(); 
+        }
         function pauseAudio() { 
-          x.pause(); 
+            x.pause(); 
         } 
     </script>
 </body>
