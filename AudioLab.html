@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <audio id="myAudio">
+        <source src="MoveIt.mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <h1>Audio Lab</h1>
+    
+    <map name = "catimagemap">
+        <button onclick="playCatAudio()" coords="320,392,1,0" shape="rect">
+    </map>
+    <img src = "cat.png" width="300" usemap="catimagemap">
+    <img src = "dog.png" width="300" height="300">
+    <img src = "bird.png" width="300" height="300">
+    <img src = "../julian.png" width="300" height="300">
+    <img src = "capybara.png" width="300" height="300">
+    <script>
+        var x = document.getElementById("myAudio"); 
+        
+        function playCatAudio() { 
+          x.play(); 
+        } 
+        
+        function pauseAudio() { 
+          x.pause(); 
+        } 
+    </script>
+</body>
+</html>
