@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<!--<link rel="stylesheet" href="index.css">-->
+<body>
+    <h1>Data Visualization</h1>
+    <canvas id="myChart" style="width:100%;max-width:800px"></canvas>
+    <canvas id="myChart2" style="width:100%;max-width:800px"></canvas>
+
+<script>
+var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
+var yValues = [55, 49, 44, 24, 15];
+var barColors = [
+  "#b91d47",
+  "#00aba9",
+  "#2b5797",
+  "#e8c3b9",
+  "#1e7145"
+];
+
+new Chart("myChart", {
+  type: "pie",
+  data: {
+    labels:["Chloe","Olivia","Mia","Sophia","Emma","Amelia","Charlotte","Emily","Grace","Isabella"],
+    datasets: [{
+        backgroundColor: ["#662483","#0000ff","#00ff00","#ff0000","#D9DC2C","#DC2CDC","#000000","#C26B08","#624AA5","#42CEE7"],
+        data: [131,109,88,71,71,60,57,53,48,43]
+    }]
+  },
+  options: {
+    title: {
+      display: true,
+      text:"Artur Saidaliev's Graph of Most Common Female Names in 2019",
+    }
+  }
+});
+new Chart("myChart2", {
+    type: 'radar',
+    data: {
+      labels: ["Pepsi", "Coca Cola", "Sprite", "Dr Pepper", "Mountain Dew"],
+      datasets: [
+        {
+          label: "Before 2010",
+          fill: true,
+          backgroundColor: "rgba(00,255,00,0.2)",
+          borderColor: "rgba(00,255,00,1)",
+          pointBorderColor: "#fff",
+          pointBackgroundColor: "rgba(00,255,00,1)",
+          data: [45,55,30,10,20]
+        }, {
+          label: "After 2010",
+          fill: true,
+          backgroundColor: "rgba(255,99,132,0.2)",
+          borderColor: "rgba(255,99,132,1)",
+          pointBorderColor: "#fff",
+          pointBackgroundColor: "rgba(255,99,132,1)",
+          pointBorderColor: "#fff",
+          data: [60,60,35,45,40]
+        }
+      ]
+    },
+    options: {
+      title: {
+        display: true,
+        text: 'Most Purchased Soda Brands'
+      }
+    }
+});
+</script>
+
+</body>
+</html>
