@@ -19,6 +19,7 @@
   <script>
     // Script for Service Worker
   </script>
+  <button id="installApp">Install</button>
   <a href="https://arturrtr.github.io/CISC3610/">Home</a>
   <script>
     window.addEventListener('load', () => {
@@ -38,6 +39,21 @@
         }
       }
     }
+    let deferredPrompt;
+    window.addEventListener('beforeinstallprompt', (e) => {
+        deferredPrompt = e;
+    });
+
+    const installApp = document.getElementById('installApp');
+    installApp.addEventListener('click', async () => {
+        if (deferredPrompt !== null) {
+            deferredPrompt.prompt();
+            const { outcome } = await deferredPrompt.userChoice;
+            if (outcome === 'accepted') {
+                deferredPrompt = null;
+            }
+        }
+    });
  </script>
 </body>
 </html>
